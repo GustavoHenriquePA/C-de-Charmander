@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    int temperatura,escala,convertido1,convertido2,convertido3;
+    char continuar;
+    do{
+    printf("\nInforme a temperatura: ");
+    scanf("%d",&temperatura);
+    printf("\nSelecione a escala de temperatura:\n[1]Kelvin\n[2]Celsius\n[3]Fahrenheit\n");
+    scanf("%d",&escala);
+    if(escala==1){
+        printf("\nSelecione a escala de temperatura para qual será convertido:\n[1]Celsius\n[2]Fahrenheit\n");
+        scanf("%d",&convertido1);
+    } else{
+        if(escala==2){
+            printf("\nSelecione a escala de temperatura para qual será convertido:\n[1]Kelvin\n[2]Fahrenheit\n");
+            scanf("%d",&convertido2);
+        } else{
+            if(escala==3){
+                printf("\nSelecione a escala de temperatura para qual será convertido:\n[1]Kelvin\n[2]Celsius\n");
+                scanf("%d",&convertido3);
+            } else{
+                printf("\nOpção Invalida\n");
+            }
+        }
+    }
+    if(escala==1 && convertido1==1){
+        printf("\nA Temperatura em Celsius é: %d°C", temperatura-273); 
+    } else{
+        if(escala==1 && convertido1==2){
+            printf("\nA Temperatura em Fahrenheit é: %d°F", (temperatura-273)*9/5+32);
+        } 
+    }
+    if(escala==2 && convertido2==1){
+        printf("\nA Temperatura em Kelvin é: %d°K", temperatura+273);
+    } else{
+        if(escala==2 && convertido2==2){
+            printf("\nA Temperatura em Fahrenheit é: %d°F", (temperatura*9/5)+32);
+        }
+    } 
+    if(escala==3 && convertido3==1){
+        printf("\nA Temperatura em Kelvin é: %d°K", (temperatura-32)*5/9+273);
+    } else{
+        if(escala==3 && convertido3==2){
+            printf("\nA Temperatura em Celsius é: %d°C", (temperatura-32)*5/9);
+        } else{
+            if(convertido1,convertido2,convertido3>=3);
+            printf("\nOpção Invalida\n");
+        }
+    }
+    printf("\n\nDeseja continuar? (s/n)\n");
+    scanf(" %c",&continuar);
+    }while (continuar == 's' || continuar == 'S');
+return 0;
+}
